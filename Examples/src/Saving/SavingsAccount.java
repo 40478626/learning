@@ -18,10 +18,9 @@ public class SavingsAccount {
         System.out.println("You just deposited " + amountToDeposit);
     }
 
-    public int withdraw(int amountToWithdraw){
+    public void withdraw(int amountToWithdraw){
         balance = balance - amountToWithdraw;
         System.out.println("You just withdrew " + amountToWithdraw);
-        return amountToWithdraw;
     }
 
     public String toString(){
