@@ -1,5 +1,6 @@
 package com.example.demo.Student;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Conditional;
@@ -10,7 +11,6 @@ import java.time.Month;
 import java.util.List;
 
 import static java.time.Month.*;
-
 @Configuration
 public class StudentConfig {
 
@@ -20,19 +20,17 @@ public class StudentConfig {
             Student amara= new Student(
                     1L,
                     "Amara",
-                    22,
                     LocalDate.of(2000, MAY, 3),
                     "amara@gmail.com"
             );
             Student yohan= new Student(
                     "Yohan",
-                    22,
                     LocalDate.of(2002, AUGUST, 11),
                     "yohan@gmail.com"
             );
 
             repository.saveAll(
-                    List.of(amara,yohan)
+                    List.of()
             );
         };
     }
